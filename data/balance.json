@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "balance_version": "0.1.0-design",
+  "shift_seconds": 300,
+  "economy": {
+    "campaign_start_cash": 150,
+    "experiment_start_cash": 1200,
+    "fixed_purchase": 900,
+    "fixed_upkeep": 45,
+    "relocation_cost": 120,
+    "base_capacity": 8,
+    "clerk_capacity": 20,
+    "clerk_wage": 75,
+    "clerk_hire": 100,
+    "border_capacity": 12,
+    "border_wage": 110,
+    "border_hire": 150,
+    "case_expiry_shifts": 3,
+    "payment_delay_shifts": 1,
+    "experiment_fine": 100,
+    "domestic_payment_probability": 0.9,
+    "foreign_payment_probability": 0.7
+  },
+  "traffic": {
+    "flow_per_shift": 80,
+    "flow_variation": 10,
+    "base_speeding": 0.35,
+    "foreign_share": 0.25
+  },
+  "awareness": {
+    "learning_rate": 0.18,
+    "forgetting_rate": 0.08,
+    "awareness_effect": 0.75,
+    "visual_response": 0.45,
+    "corridor_memory_metres": 100
+  },
+  "sites": [
+    {
+      "id": "billboard_east",
+      "corridor_id": "bypass_east",
+      "exposure": 0.25,
+      "coverage": 0.85,
+      "quality": 0.9
+    },
+    {
+      "id": "hedge_west",
+      "corridor_id": "bypass_west",
+      "exposure": 0.35,
+      "coverage": 0.9,
+      "quality": 0.88
+    },
+    {
+      "id": "wall_blocked",
+      "corridor_id": "bypass_east",
+      "exposure": 0.05,
+      "coverage": 0.0,
+      "quality": 0.9
+    }
+  ],
+  "catalogue": {
+    "manual_upkeep": 40,
+    "handheld_mk2_price": 250,
+    "tutorial_grant": 300,
+    "camera_initial_setup_seconds": 30,
+    "trailer_price": 1800,
+    "trailer_move_cost": 70,
+    "trailer_setup_seconds": 60,
+    "trailer_case_cap": 12,
+    "section_pair_price": 3600,
+    "section_pair_upkeep": 90,
+    "patrol_module_price": 2600,
+    "patrol_module_upkeep": 30,
+    "supervisor_hire": 250,
+    "supervisor_wage": 180,
+    "supervisor_capacity_bonus": 0.15,
+    "technician_hire": 150,
+    "technician_wage": 90,
+    "municipal_permit": 0,
+    "commuter_permit": 400,
+    "border_permit": 1000,
+    "tyres_brakes_price": 180,
+    "engine_service_price": 300,
+    "sedan_price": 1200,
+    "interceptor_price": 4000,
+    "campaign_target": 25000,
+    "campaign_shift_limit": 24,
+    "challenge_shifts": 6
+  }
+}

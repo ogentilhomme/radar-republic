@@ -1,0 +1,12 @@
+.godot/
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
+builds/
+art/generated/
+reports/local/
+.env
+.env.*
+!.env.example
+*.log

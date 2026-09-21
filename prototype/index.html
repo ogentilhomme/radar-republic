@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Radar Republic · Placement study</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="balance.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header><a href="#main" class="brand"><span class="badge">RR</span> RADAR REPUBLIC</a><span class="edition">OPERATIONS DESIGN / 001</span></header>
+  <main id="main">
+    <section class="intro"><div><p class="eyebrow">THE MINISTRY WOULD LIKE A BETTER QUARTER</p><h1>A good hiding place.<br>A clear line of sight.</h1><p class="lede">Explore the decision behind your first fixed radar. More photos only help when the office can turn them into payments.</p></div><div class="study-note"><strong>Interactive UX study</strong><p>Authored site assumptions on a 2D diagram. The planned game uses a navigable 3D environment and measured visibility.</p><span>NO INSTALLATION REQUIRED · NO DATA SENT</span></div></section>
+    <div class="workspace">
+      <section class="map-card" aria-labelledby="map-title">
+        <div class="card-heading"><div><p class="eyebrow">DISTRICT 01 / MUNICIPAL APPROACH</p><h2 id="map-title">Find your angle.</h2></div><span class="pill">80 km/h</span></div>
+        <div class="map">
+          <svg viewBox="0 0 800 450" role="img" aria-label="Schematic bypass road with a billboard, hedge, and building. Select a numbered site below.">
+            <defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="#d9ddc9" stroke-width="1"/></pattern></defs>
+            <rect width="800" height="450" fill="#e4e7d6"/><rect width="800" height="450" fill="url(#grid)"/>
+            <path d="M-40 332 Q240 365 420 235 T840 95" fill="none" stroke="#bdc3b3" stroke-width="110"/>
+            <path d="M-40 332 Q240 365 420 235 T840 95" fill="none" stroke="#627078" stroke-width="86"/>
+            <path d="M-40 332 Q240 365 420 235 T840 95" fill="none" stroke="#ebe6c7" stroke-width="3" stroke-dasharray="17 19"/>
+            <path d="M-40 310 Q240 343 420 213 T840 73" fill="none" stroke="#c5cecb" stroke-width="1"/>
+            <path d="M-40 354 Q240 387 420 257 T840 117" fill="none" stroke="#c5cecb" stroke-width="1"/>
+            <g fill="#7d916f"><circle cx="60" cy="75" r="28"/><circle cx="103" cy="87" r="32"/><circle cx="57" cy="113" r="25"/><circle cx="700" cy="340" r="32"/><circle cx="745" cy="370" r="26"/></g>
+            <rect x="245" y="176" width="116" height="22" rx="4" fill="#596650"/><rect x="262" y="187" width="8" height="31" fill="#596650"/>
+            <text x="247" y="160">BILLBOARD</text>
+            <rect x="500" y="310" width="120" height="30" rx="15" fill="#718467"/><text x="510" y="370">HEDGE</text>
+            <path d="M 460 32 L 604 32 L 604 124 L 460 124 Z" fill="#b7ad94"/><rect x="450" y="22" width="144" height="92" rx="3" fill="#c9c0aa"/><path d="M450 22 L522 8 L594 22" fill="#9b927d"/><text x="476" y="75">RECORDS</text><text x="485" y="94">OFFICE</text>
+            <g fill="#eee8d4" stroke="#263e4a" stroke-width="3"><rect x="182" y="304" width="35" height="18" rx="5"/><rect x="378" y="266" width="35" height="18" rx="5" transform="rotate(-31 396 275)"/><rect x="648" y="142" width="35" height="18" rx="5" transform="rotate(-16 666 151)"/></g>
+            <path id="sensor-ray" d="M290 218 L380 275" stroke="#bf692d" stroke-width="3" stroke-dasharray="6 5"/>
+            <circle id="sensor-dot" cx="290" cy="218" r="12" fill="#edaa5c" stroke="#152d3a" stroke-width="4"/>
+            <text x="30" y="420">SCHEMATIC · NOT TO SCALE</text><text x="683" y="36">N ↑</text>
+          </svg>
+        </div>
+        <div class="site-options" role="group" aria-label="Choose a placement scenario">
+          <button type="button" data-site="0" aria-pressed="true"><span>01</span><strong>Billboard edge</strong><small>Low exposure, clear corridor</small></button>
+          <button type="button" data-site="1" aria-pressed="false"><span>02</span><strong>Hedge gap</strong><small>A different road corridor</small></button>
+          <button type="button" data-site="2" aria-pressed="false"><span>03</span><strong>Behind the office</strong><small>Hidden housing, blocked sensor</small></button>
+        </div>
+        <div class="cause" id="cause">The billboard hides the housing while leaving most of the measurement corridor open.</div>
+        <section class="assumptions" aria-labelledby="assumptions-title"><h3 id="assumptions-title">Change the operating conditions</h3>
+          <div class="control"><label for="known">Known location <output id="known-label" for="known">20%</output></label><input id="known" type="range" min="0" max="100" value="20"><small>How many drivers already know about this site.</small></div>
+          <div class="control"><label for="flow">Passing cars / shift <output id="flow-label" for="flow">80</output></label><input id="flow" type="range" min="10" max="160" value="80"></div>
+          <div class="control-row"><label for="clerks">Office clerks<select id="clerks"><option value="0">None · 8 base work units</option><option value="1" selected>1 clerk · +20 work units</option><option value="2">2 clerks · +40 work units</option></select></label><label class="checkbox"><input id="border" type="checkbox"> Border specialist<br><small>Enables foreign cases; adds 12 units</small></label></div>
+        </section>
+      </section>
+      <aside class="panel" aria-labelledby="panel-title"><p class="eyebrow">PLACEMENT FORECAST</p><h2 id="panel-title">Billboard edge</h2><p class="panel-sub">Fixed camera · 5-minute operating shift</p>
+        <div class="metric"><div><span>Exposure</span><strong id="exposure-value">25%</strong></div><meter id="exposure" min="0" max="1" value=".25" aria-label="Exposure"></meter><small>Housing noticed early. Lower means more surprise.</small></div>
+        <div class="metric"><div><span>Measurement coverage</span><strong id="coverage-value">85%</strong></div><meter id="coverage" min="0" max="1" value=".85" aria-label="Measurement coverage"></meter><small>A usable sensor path. A wall can reduce this to zero.</small></div>
+        <div class="metric"><div><span>Evidence quality</span><strong id="quality-value">90%</strong></div><meter id="quality" min="0" max="1" value=".9" aria-label="Evidence quality"></meter><small>Plate readability within the valid corridor.</small></div>
+        <div class="forecast" aria-live="polite" aria-atomic="true"><p class="eyebrow">ILLUSTRATIVE STEADY-STATE NET</p><div id="net" class="big-number">—</div><p id="case-estimate">—</p><p id="bottleneck" class="notice">—</p></div>
+        <dl class="costs"><div><dt>Device purchase</dt><dd id="purchase">900 cr</dd></div><div><dt>Radar + staff / shift</dt><dd id="cost">120 cr</dd></div><div><dt>Office capacity / shift</dt><dd id="capacity">28 work units</dd></div><div><dt>Payment timing</dt><dd>Following shift</dd></div></dl>
+        <button id="pin" class="primary" type="button">Pin this scenario</button><button id="reset" class="secondary" type="button">Reset study</button>
+        <p class="fine-print">This is a model average, not guaranteed income. It uses expected capture and payment rates, and excludes hiring, acquisition, expiry, and learning over time. Use the Python experiment for queues and delayed collections.</p>
+      </aside>
+    </div>
+    <section class="comparison" aria-labelledby="comparison-title"><div><p class="eyebrow">YOUR REFERENCE POINT</p><h2 id="comparison-title">Compare before you commit.</h2></div><p id="comparison" aria-live="polite">Pin a scenario, then change the site, driver knowledge, or office capacity.</p></section>
+    <footer>RADAR REPUBLIC · A FICTIONAL PUBLIC REVENUE EXPERIMENT <span>Design values · 0.1</span></footer>
+  </main>
+</body>
+</html>
